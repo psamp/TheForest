@@ -10,4 +10,12 @@
 
 @implementation Game
 
++ (void)start {
+    
+}
+
++ (void)duel:(Character *)player opponent:(Character *)enemy {
+    
+}
+
 @end

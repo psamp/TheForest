@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		33C7D0FB1D6654DF00A62B1A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7D0FA1D6654DF00A62B1A /* main.m */; };
 		33C7D1031D6657C200A62B1A /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7D1021D6657C200A62B1A /* Character.m */; };
+		33C7D10B1D665F6D00A62B1A /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7D10A1D665F6D00A62B1A /* Game.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		33C7D0FA1D6654DF00A62B1A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		33C7D1011D6657C200A62B1A /* Character.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Character.h; sourceTree = "<group>"; };
 		33C7D1021D6657C200A62B1A /* Character.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Character.m; sourceTree = "<group>"; };
+		33C7D1091D665F6C00A62B1A /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		33C7D10A1D665F6D00A62B1A /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,8 @@
 				33C7D0FA1D6654DF00A62B1A /* main.m */,
 				33C7D1011D6657C200A62B1A /* Character.h */,
 				33C7D1021D6657C200A62B1A /* Character.m */,
+				33C7D1091D665F6C00A62B1A /* Game.h */,
+				33C7D10A1D665F6D00A62B1A /* Game.m */,
 			);
 			path = TheForest;
 			sourceTree = "<group>";
@@ -124,6 +129,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33C7D10B1D665F6D00A62B1A /* Game.m in Sources */,
 				33C7D0FB1D6654DF00A62B1A /* main.m in Sources */,
 				33C7D1031D6657C200A62B1A /* Character.m in Sources */,
 			);

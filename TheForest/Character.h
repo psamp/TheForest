@@ -16,6 +16,6 @@
 
 - (instancetype)initWithName:(NSString *)name NS_DESIGNATED_INITIALIZER;
 
-- (void)attack; // take in a spell
+- (void)attack;
 
 @end
