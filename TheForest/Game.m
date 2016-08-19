@@ -7,10 +7,12 @@
 //
 
 #import "Game.h"
+#import "UserInput.h"
 
 @implementation Game
 
 + (void)start {
+    Character *player = [[Character alloc] initWithName:getStringFromUser(30, @"What is your name?")];
     
 }
 

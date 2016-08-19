@@ -10,6 +10,7 @@
 		33C7D0FB1D6654DF00A62B1A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7D0FA1D6654DF00A62B1A /* main.m */; };
 		33C7D1031D6657C200A62B1A /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7D1021D6657C200A62B1A /* Character.m */; };
 		33C7D10B1D665F6D00A62B1A /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7D10A1D665F6D00A62B1A /* Game.m */; };
+		74D0B8C01D6776A000380250 /* UserInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D0B8BF1D6776A000380250 /* UserInput.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		33C7D1021D6657C200A62B1A /* Character.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Character.m; sourceTree = "<group>"; };
 		33C7D1091D665F6C00A62B1A /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
 		33C7D10A1D665F6D00A62B1A /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
+		74D0B8BE1D6776A000380250 /* UserInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInput.h; sourceTree = "<group>"; };
+		74D0B8BF1D6776A000380250 /* UserInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInput.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 				33C7D1021D6657C200A62B1A /* Character.m */,
 				33C7D1091D665F6C00A62B1A /* Game.h */,
 				33C7D10A1D665F6D00A62B1A /* Game.m */,
+				74D0B8BE1D6776A000380250 /* UserInput.h */,
+				74D0B8BF1D6776A000380250 /* UserInput.m */,
 			);
 			path = TheForest;
 			sourceTree = "<group>";
@@ -130,6 +135,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				33C7D10B1D665F6D00A62B1A /* Game.m in Sources */,
+				74D0B8C01D6776A000380250 /* UserInput.m in Sources */,
 				33C7D0FB1D6654DF00A62B1A /* main.m in Sources */,
 				33C7D1031D6657C200A62B1A /* Character.m in Sources */,
 			);
@@ -258,6 +264,7 @@
 				33C7D1001D6654DF00A62B1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
