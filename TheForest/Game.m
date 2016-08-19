@@ -13,11 +13,21 @@
 
 + (void)start {
     Character *player = [[Character alloc] initWithName:getStringFromUser(30, @"What is your name?")];
+    Character *lawdZoldymorp = [[Character alloc] initWithName:@"Lord Zoldymorp"];
+    
+    [Game duel: player enemy:lawdZoldymorp];
     
 }
 
-+ (void)duel:(Character *)player opponent:(Character *)enemy {
++ (void)duel:(Character *)player enemy:(Character *)enemy {
     
+    while ([player healthPoints] != 0 && [enemy healthPoints] != 0) {
+        [player setHealthPoints: [player healthPoints] - [enemy attack]];
+        [enemy setHealthPoints: [enemy healthPoints] - [player attack]];
+        
+        NSLog(@"Player HP: %@", @([player healthPoints]));
+        NSLog(@"Enemy HP: %@", @([enemy healthPoints]));
+    }
 }
 
 @end

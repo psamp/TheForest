@@ -13,6 +13,6 @@
 
 + (void)start;
 
-+ (void)duel:(Character *)player opponent:(Character *)enemy;
++ (void)duel:(Character *)player enemy:(Character *)enemy;
 
 @end

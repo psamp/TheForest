@@ -27,8 +27,19 @@
     return [self initWithName:nil];
 }
 
-- (void)attack { // take in a spell
+- (NSInteger)attack {
+    NSInteger damage = MAX(_manaPoints % arc4random_uniform(150), 30);
+    
+    return damage;
+}
 
+- (void)setHealthPoints:(NSInteger)healthPoints {
+    _healthPoints = MAX(healthPoints, 0);
+
+}
+
+- (void)setManaPoints:(NSInteger)manaPoints {
+    _manaPoints = MAX(manaPoints, 0);
 }
 
 @end
