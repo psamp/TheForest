@@ -15,4 +15,6 @@
 
 + (void)duel:(Character *)player enemy:(Character *)enemy;
 
++ (void)determineWinner:(Character *)player enemy:(Character *)enemy;
+
 @end
