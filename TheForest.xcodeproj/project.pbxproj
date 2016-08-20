@@ -10,6 +10,7 @@
 		33C7D0FB1D6654DF00A62B1A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7D0FA1D6654DF00A62B1A /* main.m */; };
 		33C7D1031D6657C200A62B1A /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7D1021D6657C200A62B1A /* Character.m */; };
 		33C7D10B1D665F6D00A62B1A /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7D10A1D665F6D00A62B1A /* Game.m */; };
+		33C7D1111D68C9BC00A62B1A /* Spell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7D1101D68C9BC00A62B1A /* Spell.m */; };
 		74D0B8C01D6776A000380250 /* UserInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D0B8BF1D6776A000380250 /* UserInput.m */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,8 @@
 		33C7D1021D6657C200A62B1A /* Character.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Character.m; sourceTree = "<group>"; };
 		33C7D1091D665F6C00A62B1A /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
 		33C7D10A1D665F6D00A62B1A /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
+		33C7D10F1D68C9BC00A62B1A /* Spell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spell.h; sourceTree = "<group>"; };
+		33C7D1101D68C9BC00A62B1A /* Spell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Spell.m; sourceTree = "<group>"; };
 		74D0B8BE1D6776A000380250 /* UserInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInput.h; sourceTree = "<group>"; };
 		74D0B8BF1D6776A000380250 /* UserInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInput.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +76,8 @@
 				33C7D10A1D665F6D00A62B1A /* Game.m */,
 				74D0B8BE1D6776A000380250 /* UserInput.h */,
 				74D0B8BF1D6776A000380250 /* UserInput.m */,
+				33C7D10F1D68C9BC00A62B1A /* Spell.h */,
+				33C7D1101D68C9BC00A62B1A /* Spell.m */,
 			);
 			path = TheForest;
 			sourceTree = "<group>";
@@ -135,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				33C7D10B1D665F6D00A62B1A /* Game.m in Sources */,
+				33C7D1111D68C9BC00A62B1A /* Spell.m in Sources */,
 				74D0B8C01D6776A000380250 /* UserInput.m in Sources */,
 				33C7D0FB1D6654DF00A62B1A /* main.m in Sources */,
 				33C7D1031D6657C200A62B1A /* Character.m in Sources */,

@@ -13,9 +13,10 @@
 @property (nonatomic, copy, readonly) NSString * name;
 @property (nonatomic, readwrite) NSInteger healthPoints;
 @property (nonatomic, readwrite) NSInteger manaPoints;
+@property (nonatomic, copy, readonly) NSMutableArray * spells;
 
 - (instancetype)initWithName:(NSString *)name NS_DESIGNATED_INITIALIZER;
 
-- (NSInteger)attack;
+- (NSInteger)attack:(NSInteger)spellIndex;
 
 @end
