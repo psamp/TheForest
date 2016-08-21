@@ -17,4 +17,6 @@
 
 + (void)determineWinner:(Character *)player enemy:(Character *)enemy;
 
++ (void)displayCharacterStats:(Character *)character startingHealthPoints:(NSNumber *)startHP startingManaPoints:(NSNumber *)startMP;
+
 @end

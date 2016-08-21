@@ -24,8 +24,13 @@
     NSNumber *startingHealth = @([player healthPoints]);
     NSNumber *startingMana = @([player manaPoints]);
     
+    [Game displayCharacterStats:player startingHealthPoints:startingHealth startingManaPoints: startingMana];
+    NSLog(@"\n");
+    
+    [Game displayCharacterStats:enemy startingHealthPoints:startingHealth startingManaPoints: startingMana];
+    NSLog(@"\n");
+    
     while ([player healthPoints] != 0 && [enemy healthPoints] != 0) {
-        
         if (([player manaPoints] == 0 || [enemy manaPoints] == 0)) {
             break;
         }
@@ -35,16 +40,15 @@
             NSLog(@"%@: %@ - %@ (%@ mana)", @(i), [spell name],[spell effect], @([spell manaCost]));
         }
         
-        [enemy setHealthPoints: [enemy healthPoints] - [player attack:getNumberFromUser((int)[[player spells] count], @"Enter the spell you'd like to cast:")]];
+        NSLog(@"\n");
         [player setHealthPoints: [player healthPoints] - [enemy attack:arc4random_uniform((int) [[enemy spells] count])]];
+        [enemy setHealthPoints: [enemy healthPoints] - [player attack:getNumberFromUser((int)[[player spells] count], @"Enter the number of the spell you'd like to cast:")]];
         
         NSLog(@"\n");
-        NSLog(@"%@ HP: %@/%@", [enemy name],@([enemy healthPoints]), startingHealth);
-        NSLog(@"%@ MP: %@/%@", [enemy name],@([enemy manaPoints]), startingMana);
+        [Game displayCharacterStats:player startingHealthPoints:startingHealth startingManaPoints: startingMana];
         NSLog(@"\n");
         
-        NSLog(@"%@ HP: %@/%@", [player name],@([player healthPoints]), startingHealth);
-        NSLog(@"%@ MP: %@/%@", [player name],@([player manaPoints]), startingMana);
+        [Game displayCharacterStats:enemy startingHealthPoints:startingHealth startingManaPoints: startingMana];
         NSLog(@"\n");
     }
     
@@ -61,5 +65,11 @@
         NSLog(@"%@ won the duel.", [enemy name]);
     }
 }
+
++ (void)displayCharacterStats:(Character *)character startingHealthPoints:(NSNumber *)startHP startingManaPoints:(NSNumber *)startMP{
+    NSLog(@"%@ HP: %@/%@", [character name],@([character healthPoints]), startHP);
+    NSLog(@"%@ MP: %@/%@", [character name],@([character manaPoints]), startMP);
+}
+
 
 @end
