@@ -31,7 +31,7 @@ NSInteger getNumberFromUser(int maxValidChoice, NSString *prompt) {
     int numberOfItemsScanned = 0;
     NSInteger minValidChoice = 0;
     
-    while (numberOfItemsScanned != 1 || (choice < minValidChoice || choice > maxValidChoice)) {
+    while (numberOfItemsScanned != 1 || (choice < minValidChoice || choice >= maxValidChoice)) {
         NSLog(@"%@", prompt);
         fpurge(stdin);
         numberOfItemsScanned = scanf("%ld", &choice);

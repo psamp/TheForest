@@ -35,8 +35,8 @@
             NSLog(@"%@: %@ - %@ (%@ mana)", @(i), [spell name],[spell effect], @([spell manaCost]));
         }
         
-        [enemy setHealthPoints: [enemy healthPoints] - [player attack:getNumberFromUser(2, @"Enter the spell you'd like to cast:")]];
-        [player setHealthPoints: [player healthPoints] - [enemy attack:arc4random_uniform(3)]];
+        [enemy setHealthPoints: [enemy healthPoints] - [player attack:getNumberFromUser((int)[[player spells] count], @"Enter the spell you'd like to cast:")]];
+        [player setHealthPoints: [player healthPoints] - [enemy attack:arc4random_uniform((int) [[enemy spells] count])]];
         
         NSLog(@"\n");
         NSLog(@"%@ HP: %@/%@", [enemy name],@([enemy healthPoints]), startingHealth);

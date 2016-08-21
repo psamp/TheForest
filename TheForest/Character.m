@@ -23,8 +23,10 @@
         
         _spells = [NSMutableArray array];
         [_spells addObject: [[Spell alloc] initWithName:@"Flipendo" effect:@"knockback" manaCost:10]];
-        [_spells addObject: [[Spell alloc] initWithName:@"Protego" effect:@"shield charm" manaCost:20]];
-        [_spells addObject: [[Spell alloc] initWithName:@"Incendio" effect:@"shoot fire ball" manaCost:30]];\
+        [_spells addObject: [[Spell alloc] initWithName:@"Diffindo" effect:@"shield charm" manaCost:20]];
+        [_spells addObject: [[Spell alloc] initWithName:@"Incendio" effect:@"shoots fire-ball" manaCost:20]];
+        [_spells addObject: [[Spell alloc] initWithName:@"Protego" effect:@"shield charm" manaCost:40]];
+        
     }
     return self;
 }
