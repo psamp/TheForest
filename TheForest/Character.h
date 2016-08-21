@@ -14,6 +14,7 @@
 @property (nonatomic, readwrite) NSInteger healthPoints;
 @property (nonatomic, readwrite) NSInteger manaPoints;
 @property (nonatomic, copy, readonly) NSMutableArray * spells;
+@property (nonatomic, readwrite) NSInteger shieldPoints;
 
 - (instancetype)initWithName:(NSString *)name NS_DESIGNATED_INITIALIZER;
 

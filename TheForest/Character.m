@@ -15,7 +15,9 @@
     if (name == nil) {
         return nil;
     }
+    
     self = [super init];
+    
     if (self) {
         _name = name;
         _healthPoints = 200;
@@ -27,7 +29,9 @@
         [_spells addObject: [[Spell alloc] initWithName:@"Incendio" effect:@"shoots fire-ball" manaCost:20]];
         [_spells addObject: [[Spell alloc] initWithName:@"Protego" effect:@"shield charm" manaCost:40]];
         
+        _shieldPoints = 0;
     }
+    
     return self;
 }
 
@@ -44,14 +48,18 @@
     Spell * spell = _spells[spellIndex];
     NSLog(@"%@ cast %@", _name, [_spells[spellIndex] name]);
     
-    NSInteger spellDamage = [spell manaCost];
-    
     [self setManaPoints: _manaPoints - [spell manaCost]];
-    return spellDamage;
+
+    if ([[spell name]  isEqual: @"Protego"]) {
+        [self setShieldPoints: [self shieldPoints] + 20];
+        return 0;
+    }
+
+    return [spell manaCost];
 }
 
 - (void)setHealthPoints:(NSInteger)healthPoints {
-    _healthPoints = MAX(healthPoints, 0);
+    _healthPoints = MAX(healthPoints, 0) + [self shieldPoints];
     
 }
 
