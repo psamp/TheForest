@@ -20,16 +20,17 @@
     
     if (self) {
         _name = name;
-        _healthPoints = 200;
-        _manaPoints = 150;
+        
+        _maxHealthPoints = 600;
+        _maxManaPoints = 450;
+        
+        _healthPoints = _maxHealthPoints;
+        _manaPoints = _maxManaPoints;
         
         _spells = [NSMutableArray array];
-        [_spells addObject: [[Spell alloc] initWithName:@"Flipendo" effect:@"knockback" manaCost:10]];
-        [_spells addObject: [[Spell alloc] initWithName:@"Diffindo" effect:@"shield charm" manaCost:20]];
-        [_spells addObject: [[Spell alloc] initWithName:@"Incendio" effect:@"shoots fire-ball" manaCost:20]];
-        [_spells addObject: [[Spell alloc] initWithName:@"Protego" effect:@"shield charm" manaCost:40]];
-        
-        _shieldPoints = 0;
+        [_spells addObject: [[Spell alloc] initWithName:@"Flipendo" effect:@"knockback spell" manaCost:40]];
+        [_spells addObject: [[Spell alloc] initWithName:@"Diffindo" effect:@"severing charm" manaCost:80]];
+        [_spells addObject: [[Spell alloc] initWithName:@"Incendio" effect:@"shoots fire-ball" manaCost:180]];
     }
     
     return self;
@@ -40,27 +41,21 @@
 }
 
 - (NSInteger)attack:(NSInteger)spellIndex {
-    if (_manaPoints == 0) {
-        NSLog(@"You are out of mana");
-        return 0;
-    }
-    
     Spell * spell = _spells[spellIndex];
-    NSLog(@"%@ cast %@", _name, [_spells[spellIndex] name]);
     
-    [self setManaPoints: _manaPoints - [spell manaCost]];
-
-    if ([[spell name]  isEqual: @"Protego"]) {
-        [self setShieldPoints: [self shieldPoints] + 20];
+    if ([self manaPoints] < [_spells[spellIndex] manaCost]) {
+        NSLog(@"%@ does not have enough mana for %@ (%@ mana)", [self name], [spell name], @([spell manaCost]));
         return 0;
     }
-
+    
+    NSLog(@"%@ cast %@", [self name], [_spells[spellIndex] name]);
+    [self setManaPoints: [self manaPoints] - [spell manaCost]];
+    
     return [spell manaCost];
 }
 
 - (void)setHealthPoints:(NSInteger)healthPoints {
-    _healthPoints = MAX(healthPoints, 0) + [self shieldPoints];
-    
+    _healthPoints = MAX(healthPoints, 0);
 }
 
 - (void)setManaPoints:(NSInteger)manaPoints {
